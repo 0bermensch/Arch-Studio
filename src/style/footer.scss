@@ -1,0 +1,153 @@
+.footer {
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: #eeeff4;
+  min-height: 150px;
+  display: flex;
+  width: 80%;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  .name {
+    display: flex;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: inherit;
+    margin-right: 100px;
+  }
+
+  .links {
+    font-weight: bold;
+    color: #7d828f !important;
+    height: inherit;
+    align-items: center;
+    display: flex;
+    position: relative;
+    width: 100%;
+    .link {
+      text-decoration: none;
+      cursor: pointer;
+      padding-right: 70px;
+      &:visited {
+        color: #7d828f;
+      }
+    }
+  }
+
+  .btn-wrap {
+    position: absolute;
+    width: 200px;
+    top: 40%;
+    right: -100px;
+  }
+  .attribution {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding-bottom: 10px;
+    a {
+      color: blue;
+    }
+  }
+}
+
+@media screen and(max-width:901px) {
+  .attribution {
+    padding-left: 10%;
+  }
+}
+
+@media screen and(max-width:894px) {
+  .name {
+    margin-right: 10px !important;
+  }
+  .attribution {
+    position: absolute;
+    margin-left: auto;
+
+    bottom: 0;
+
+    right: 0;
+    font-size: 10pt !important;
+    text-align: center;
+    a {
+      color: blue;
+    }
+  }
+}
+
+@media screen and(max-width:795px) {
+  .footer {
+    width: 80%;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    .name {
+      margin-right: 10px !important;
+    }
+
+    .links {
+      width: 100%;
+      .link {
+        padding: 5px !important ;
+      }
+    }
+    .btn-wrap {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 150px;
+      top: 34%;
+      right: -100px;
+    }
+    .attribution {
+      padding-left: 20%;
+    }
+  }
+}
+
+@media screen and(max-width:650px) {
+  .attribution {
+    font-size: 8pt !important;
+  }
+}
+
+@media screen and(max-width:590px) {
+  .footer {
+    flex-direction: column;
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center;
+
+    .name {
+      top: -50px;
+      position: absolute;
+      width: 150px;
+      height: 150px;
+    }
+    .links {
+      margin-top: 120px;
+      flex-direction: column;
+      margin-bottom: 30px;
+      .link {
+        padding-right: 0 !important ;
+        padding-bottom: 30px !important;
+      }
+    }
+    .btn-wrap {
+      padding-bottom: 50px;
+      width: 300px !important;
+      position: static !important;
+    }
+    .attribution {
+      text-align: center;
+      font-size: 10pt !important;
+      padding-left: 0% !important;
+    }
+  }
+}

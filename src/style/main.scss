@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (max-width: 550px) {
+  .main {
+    padding: 0 !important;
+  }
+}

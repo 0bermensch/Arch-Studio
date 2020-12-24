@@ -1,38 +1,62 @@
 .App {
-  text-align: center;
+  font-family: 'Spartan', sans-serif !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.page-name {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  transform: rotate(90deg);
+  font-size: 12pt;
+  letter-spacing: 15px;
+  color: #C8CCD8;
+  text-transform: uppercase;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.line {
+  z-index: 999;
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  content: '';
+  height: 120px !important;
+  border-left: 1px #C8CCD8 solid;
+}
+
+a {
+  color: #7D828F;
+  text-decoration: none !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  /* For some Androids */
+}
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width:459px) {
+  .App {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/* disabling animation delay on mobile */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 800px) {
+  [data-aos-delay] {
+    transition-delay: 0s !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:850px) {
+  .page-name {
+    display: none;
+  }
+  .line {
+    display: none;
   }
 }

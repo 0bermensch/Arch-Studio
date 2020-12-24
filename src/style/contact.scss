@@ -1,0 +1,396 @@
+.contact {
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 100px;
+  .page-name {
+    top: 235px;
+    left: -18px;
+  }
+  .line {
+    top: 0;
+  }
+  .contact-main {
+    position: relative;
+    display: flex;
+    margin-bottom: 300px;
+
+    .contact-img-wrap {
+      background-color: black;
+      display: flex;
+      .contact-hero-img {
+        content: url(../asset/contact-images/desktop/image-hero.jpg);
+        opacity: 0.6;
+      }
+    }
+
+    .contact-content-wrap {
+      position: relative;
+      background-color: #fff;
+      min-width: 650px;
+      margin-left: -140px;
+      margin-top: 250px;
+
+      .contact-banner {
+        top: -70px;
+        position: absolute;
+        font-size: 120pt;
+        color: #eeeff4;
+        font-weight: bold;
+        p {
+          margin: 0;
+        }
+      }
+
+      .contact-content {
+        padding-top: 100px;
+        padding-left: 25%;
+        width: inherit;
+        height: 200px;
+
+        .contact-line {
+          position: absolute;
+          top: 100px;
+          left: 25%;
+          content: "";
+          width: 50px;
+          border-top: 1px #c8ccd8 solid;
+        }
+
+        .contact-header {
+          color: black;
+          font-size: 25pt;
+          font-weight: bold;
+          max-width: 300px;
+          padding-top: 50px;
+          padding-bottom: 40px;
+        }
+
+        .contact-text {
+          color: #7d828f;
+          max-width: 285px;
+          font-weight: 700;
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .contact-details {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    .details-line {
+      position: absolute;
+      top: -70px;
+      content: "";
+      width: 50px;
+      border-top: 1px #c8ccd8 solid;
+    }
+    .details-title {
+      font-size: 40pt;
+      color: black;
+      font-weight: bold;
+      max-width: 200px;
+    }
+
+    .main-office {
+      display: flex;
+      flex-direction: column;
+      color: #60636d;
+      font-size: 12pt;
+
+      .main-office-title {
+        font-weight: bold;
+      }
+
+      .view-on-map {
+        display: flex;
+        flex-direction: row-reverse;
+        color: black;
+        font-weight: bold;
+        display: inline;
+        cursor: pointer;
+        margin-right: 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        p {
+          svg {
+            position: absolute;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+
+    .second-office {
+      @extend .main-office;
+      .second-office-title {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .map-wrap {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+
+    .map {
+      min-width: 300px;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    .contact-form-title {
+      font-size: 35pt;
+      width: 200px;
+      font-weight: bold;
+    }
+    .form {
+      width: 60%;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        .input-wrap {
+          width: inherit;
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+
+          input {
+            position: relative;
+            outline: 0;
+            padding: 10px;
+            font-size: 14pt;
+            margin-bottom: 100px;
+            min-width: 80%;
+            border: 0;
+            border-bottom: 1px black solid;
+            &::placeholder {
+              font-size: 14pt;
+
+              font-weight: bold;
+            }
+          }
+          span {
+            position: absolute;
+            font-size: 14pt;
+            color: red;
+            right: 0%;
+            top: 20px;
+          }
+        }
+      }
+      .form-btn {
+        cursor: pointer;
+        position: fixed;
+        right: px;
+        bottom: 50px;
+        width: 50px;
+        height: 50px;
+        border: 0;
+        background-color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .contact-banner {
+    font-size: 105pt !important;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .contact {
+    padding: 0;
+
+    .contact-main {
+      .contact-img-wrap {
+        max-width: 550px;
+        margin-right: auto;
+        margin-left: auto;
+        .contact-hero-img {
+          min-width: 500px;
+          width: 100%;
+        }
+      }
+
+      .contact-content-wrap {
+        margin-left: -450px !important;
+
+        .contact-content {
+          max-width: 100%;
+        }
+        .contact-banner {
+          font-size: 90pt;
+          right: 200px;
+        }
+      }
+    }
+
+    .page-name {
+      display: none;
+    }
+    .line {
+      display: none;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center !important;
+      .input-wrap {
+        justify-content: center !important ;
+      }
+    }
+    .form-btn {
+      right: 8%;
+    }
+    span {
+      position: absolute;
+      font-size: 11pt !important;
+      color: red;
+      right: 10% !important;
+      top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .map {
+    content: url(../asset/contact-images/tablet/image-map.png);
+  }
+
+  .contact-hero-img {
+    content: url(../asset/contact-images/tablet/image-hero.jpg) !important ;
+  }
+  .contact-details {
+    padding-left: 10%;
+
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    .details-title {
+      padding-left: 0%;
+      margin-bottom: 20px;
+      max-width: 100% !important;
+      font-size: 28pt !important;
+    }
+    .main-office {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 777px) {
+  .contact {
+    .contact-main {
+      padding-left: 10%;
+
+      .contact-banner {
+        left: 0%;
+      }
+      .contact-content {
+        padding-top: 8% !important;
+        padding-left: 10% !important;
+
+        .contact-line {
+          top: 25% !important;
+          left: 10% !important;
+        }
+        .contact-header {
+          font-size: 35pt !important;
+          max-width: 360px !important;
+        }
+      }
+    }
+    .contact-form {
+      padding-left: 0 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .contact {
+    width: 100%;
+
+    .contact-main {
+      padding-left: 0 !important;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center !important;
+
+      .contact-img-wrap {
+        position: relative;
+        width: 100%;
+
+        max-height: 300px;
+        .contact-hero-img {
+          width: 100%;
+          content: url(../asset/contact-images/mobile/image-hero.jpg) !important;
+        }
+      }
+
+      .contact-content-wrap {
+        min-width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 10%;
+        position: relative;
+        margin-left: 0 !important;
+        margin-top: 0;
+
+        .contact-content {
+          position: relative;
+          width: 100% !important;
+          padding-left: 2% !important;
+          display: flex;
+          flex-direction: column;
+
+          .contact-header {
+            font-size: 30pt !important;
+          }
+        }
+
+        .contact-banner {
+          display: none;
+        }
+        .contact-line {
+          display: none;
+        }
+      }
+    }
+    .map {
+      content: url(../asset/contact-images/mobile/image-map.png);
+    }
+    .contact-form {
+      flex-direction: column;
+
+      padding-left: 10%;
+      form {
+        margin-left: 0 !important;
+        margin-top: 20px;
+
+        .input-wrap {
+          span {
+            position: absolute;
+            font-size: 9pt !important;
+            color: red;
+            right: 0% !important;
+            top: 20px !important;
+          }
+        }
+      }
+    }
+  }
+}
